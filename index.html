@@ -1,132 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>O Agir do Espírito Santo | E-book</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-:root{
-  --deep:#031B4E; --navy:#062A66; --blue:#0A4FA3; --electric:#1677D2;
-  --sky:#5BB8FF; --white:#fff; --muted:#B8C9E5; --gold:#D4AF5A;
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Montserrat,Arial,sans-serif;color:#10233f;background:#fff;line-height:1.6}
-.hero{min-height:760px;background:radial-gradient(circle at 78% 35%,#0c5dbb55 0,transparent 32%),linear-gradient(135deg,var(--deep),#020f2d 72%);color:#fff;display:flex;align-items:center;overflow:hidden;position:relative}
-.hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;top:-170px;background:#1677d21c;filter:blur(20px)}
-.container{width:min(1120px,92%);margin:auto}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center;position:relative;z-index:2}
-.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--sky);font-weight:700}
-h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0;font-weight:800;letter-spacing:-2px}
-h1 span{color:#78c8ff}
-.lead{font-size:16px;color:#dce8f8;max-width:650px}
-.cta{display:inline-block;margin-top:25px;padding:16px 27px;border-radius:10px;background:linear-gradient(135deg,#2188e8,#0d5cb7);color:#fff;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.5px;box-shadow:0 12px 30px #00173580}
-.cta:hover{transform:translateY(-2px)}
-.meta{display:flex;gap:24px;margin-top:25px;font-size:12px;color:var(--muted);flex-wrap:wrap}
-.book{width:min(330px,75vw);margin:auto;transform:rotate(3deg);filter:drop-shadow(0 30px 35px #0009)}
-.book-cover{aspect-ratio:2/3;background:linear-gradient(160deg,#0b63be,#031538 72%);border:1px solid #70bfff66;border-radius:4px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 0 50px #02132e88}
-.book-cover small{font-size:9px;letter-spacing:2px;color:#a9d9ff;font-weight:700}.book-title{font-size:31px;line-height:1.03;font-weight:800}.book-sub{font-size:10px;color:#d7e8fa}.cross{font-size:56px;color:#8fd0ff;text-align:center;text-shadow:0 0 30px #4aaeff}
-section{padding:85px 0}.light{background:#f5f9ff}.dark{background:var(--deep);color:#fff}
-.section-title{text-align:center;font-size:34px;line-height:1.15;margin:0 auto 14px;font-weight:800;color:var(--deep)}
-.dark .section-title{color:#fff}.section-sub{text-align:center;max-width:700px;margin:0 auto 45px;font-size:12px;color:#61728c}.dark .section-sub{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #dbe8f8;border-radius:16px;padding:28px;box-shadow:0 12px 35px #062a6610}.dark .card{background:#062a66;border-color:#2874bd55;color:#fff}.icon{width:45px;height:45px;border-radius:12px;background:#e4f3ff;color:#0a4fa3;display:grid;place-items:center;font-size:20px;margin-bottom:18px}.card h3{font-size:15px;margin:0 0 8px}.card p{font-size:12px;color:#64748b;margin:0}.dark .card p{color:#bfd0e7}
-.chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.chapter{padding:20px;border-left:3px solid var(--electric);background:#fff;border-radius:0 12px 12px 0;box-shadow:0 8px 25px #062a660c}.chapter strong{font-size:12px;color:var(--blue)}.chapter h3{margin:4px 0;font-size:15px;color:var(--deep)}.chapter p{font-size:12px;color:#66758a;margin:0}
-.author{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}.author-box{height:300px;border-radius:22px;background:linear-gradient(145deg,#0a4fa3,#031b4e);display:grid;place-items:center;color:#9fd7ff;font-size:80px}.author h2{font-size:34px;color:var(--deep);margin:0 0 12px}.author p,.author li{font-size:12px;color:#60718a}.author ul{padding-left:18px}
-.offer{background:linear-gradient(135deg,var(--deep),#073d86);color:#fff;text-align:center}.price{font-size:50px;font-weight:800;margin:15px}.offer .section-title{color:#fff}.offer p{font-size:12px;color:#c7daf3}
-.faq{max-width:760px;margin:auto}.faq details{border-bottom:1px solid #dbe5f1;padding:17px 0}.faq summary{font-size:12px;font-weight:700;color:var(--deep);cursor:pointer}.faq p{font-size:12px;color:#64748b}
-footer{background:#020f2d;color:#90a9ca;padding:35px 0;text-align:center;font-size:11px}
-@media(max-width:800px){.hero{min-height:auto;padding:85px 0}.hero-grid,.author{grid-template-columns:1fr}.hero-copy{text-align:center}.lead{margin:auto}.meta{justify-content:center}.cards{grid-template-columns:1fr}.chapters{grid-template-columns:1fr}.book{margin-top:20px}section{padding:65px 0}.author-box{height:220px}h1{letter-spacing:-1px}}
+  :root {
+    --deep: #031B4E;
+    --navy: #062A66;
+    --blue: #0A4FA3;
+    --electric: #1677D2;
+    --sky: #65C2FF;
+    --gold: #D4AF5A;
+    --light: #F5F9FF;
+    --text: #10233F;
+    --muted: #63748C;
+  }
+  * {box-sizing: border-box;}
+  html {scroll-behavior: smooth;}
+  body {margin: 0; font-family: Montserrat, Arial, sans-serif; color: var(--text); line-height: 1.6; background: #fff;}
+  .container {width: min(1120px, 92%); margin: auto;}
+
+  .hero {background: linear-gradient(135deg, var(--deep), var(--navy)); color: #fff; padding: 60px 0;}
+  .hero-grid {display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;}
+  .badge {display: inline-block; background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px;}
+  h1 {font-size: 38px; font-weight: 800; margin: 0 0 20px; line-height: 1.25;}
+  h1 span {color: var(--sky);}
+  .hero p {font-size: 15px; color: #D7E4F5; max-width: 480px;}
+  .price {margin: 24px 0;}
+  .price small {display: block; font-size: 12px; letter-spacing: 1px; color: #9FC0E8; margin-bottom: 4px;}
+  .price strong {font-size: 40px; font-weight: 800; color: var(--gold);}
+  .cta {display: inline-block; background: var(--gold); color: var(--deep); font-weight: 800; padding: 16px 32px; border-radius: 10px; text-decoration: none; font-size: 15px; letter-spacing: 0.5px; transition: transform .2s;}
+  .cta:hover {transform: translateY(-2px);}
+  .meta {display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; font-size: 12px; color: #C6D9EF;}
+
+  .book-feature {background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 32px; text-align: center; max-width: 280px; margin: auto;}
+  .book-feature small {font-size: 11px; letter-spacing: 1px; color: var(--sky); font-weight: 700;}
+  .book-feature .symbol {font-size: 36px; color: var(--gold); margin: 14px 0;}
+  .book-feature b {font-size: 20px; display: block; line-height: 1.3;}
+  .book-feature em {font-size: 11px; color: #A9C3E4; display: block; margin-top: 12px; font-style: normal;}
+
+  .light {padding: 70px 0; background: var(--light);}
+  .title {text-align: center; font-size: 30px; font-weight: 800; color: var(--deep); margin-bottom: 14px;}
+  .subtitle {text-align: center; max-width: 640px; margin: 0 auto 40px; color: var(--muted); font-size: 15px;}
+
+  .collection {display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+  .book-card {background: var(--deep); border-radius: 14px; padding: 24px; box-shadow: 0 6px 20px rgba(10,79,163,0.15);}
+  .book-card .chapter-label {font-size: 12px; font-weight: 800; letter-spacing: 0.5px; color: #fff; margin: 0 0 8px;}
+  .book-card .chapter-title {font-size: 16px; font-weight: 700; color: #fff; margin: 0 0 14px; line-height: 1.35;}
+  .book-card .chapter-desc {font-size: 13px; color: #A9C3E4; line-height: 1.6; margin: 0;}
+  .book-card .chapter-desc b {color: var(--sky); font-weight: 700;}
+
+  .cards {display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;}
+  .card {background: #fff; border: 1px solid #dbe8f8; border-radius: 16px; padding: 28px; box-shadow: 0 12px 35px rgba(6,42,102,0.06);}
+  .card .icon {width: 45px; height: 45px; border-radius: 12px; background: #e4f3ff; color: var(--blue); display: grid; place-items: center; font-size: 20px; margin-bottom: 18px;}
+  .card h3 {font-size: 15px; margin: 0 0 8px; color: var(--deep);}
+  .card p {font-size: 12px; color: var(--muted); margin: 0;}
+
+  .offer {background: var(--deep); color: #fff; padding: 70px 0; text-align: center;}
+  .offer h2 {font-size: 28px; font-weight: 800; margin-bottom: 10px;}
+  .offer p {color: #C6D9EF; max-width: 600px; margin: 0 auto 30px;}
+  .bigprice {font-size: 48px; font-weight: 800; color: var(--gold); margin-bottom: 6px;}
+  .offer small {display: block; font-size: 12px; color: #9FC0E8; margin-bottom: 20px;}
+
+  .author {display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: center; padding: 70px 0;}
+  .author-box {height: 260px; border-radius: 22px; background: linear-gradient(145deg, var(--blue), var(--deep)); display: grid; place-items: center; color: #9fd7ff; font-size: 70px;}
+  .author-eyebrow {font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 10px;}
+  .author h2 {font-size: 28px; color: var(--deep); margin: 0 0 4px; line-height: 1.3;}
+  .author h3 {font-size: 15px; color: var(--muted); font-weight: 600; margin: 0 0 20px;}
+  .author p {font-size: 14px; color: var(--text); line-height: 1.7; margin: 0 0 22px;}
+  .author-credentials {list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;}
+  .author-credentials li {font-size: 13px; color: var(--muted); padding-left: 24px; position: relative; line-height: 1.5;}
+  .author-credentials li:before {content: "✓"; position: absolute; left: 0; color: var(--electric); font-weight: 700;}
+
+  .faq {padding: 70px 0;}
+  .faq-item {border-bottom: 1px solid #E1E8F2; padding: 18px 0;}
+  .faq-item h4 {font-size: 15px; color: var(--deep); margin: 0 0 6px;}
+  .faq-item p {font-size: 13px; color: var(--muted); margin: 0;}
+
+  .footer {background: var(--deep); color: #C6D9EF; text-align: center; padding: 30px 0; font-size: 12px;}
+
+  @media (max-width: 860px) {
+    .hero-grid {grid-template-columns: 1fr;}
+    .collection {grid-template-columns: 1fr;}
+    .cards {grid-template-columns: 1fr;}
+    .author {grid-template-columns: 1fr;}
+    h1 {font-size: 28px;}
+  }
 </style>
 </head>
 <body>
+
 <header class="hero">
 <div class="container hero-grid">
-<div class="hero-copy">
-<div class="eyebrow">Série de Mensagens e Estudos no Livro de Atos</div>
-<h1>O Agir do <span>Espírito Santo</span></h1>
-<p class="lead">Uma jornada pelos capítulos iniciais de Atos para compreender o poder do Espírito Santo, fortalecer a fé e transformar conhecimento bíblico em prática.</p>
+<div>
+<div class="badge">E-book Individual · Série em Atos</div>
+<h1>O Agir do<br><span>Espírito Santo</span></h1>
+<p>Uma jornada pelos capítulos iniciais de Atos para compreender o poder do Espírito Santo, fortalecer a fé e transformar conhecimento bíblico em prática.</p>
+<div class="price"><small>ADQUIRA POR</small><strong>R$ 19,70</strong></div>
 <a class="cta" href="https://payfast.greenn.com.br/44pssd8" target="_blank" rel="noopener noreferrer">QUERO MEU E-BOOK</a>
-<div class="meta"><span>✓ Estudo bíblico</span><span>✓ Devocional</span><span>✓ Pequenos grupos</span></div>
+<div class="meta"><span>✓ Estudo bíblico</span><span>✓ Devocional</span><span>✓ Pequenos grupos</span><span>✓ Grupos de comunhão</span></div>
 </div>
-<div class="book"><div class="book-cover"><small>E-BOOK 1</small><div><div class="cross">✦</div><div class="book-title">O AGIR DO<br>ESPÍRITO SANTO</div></div><div class="book-sub">Rev. Rodrigo Alexandre de Melo<br>Série de Mensagens e Estudos no Livro de Atos</div></div></div>
-</div></header>
+<div class="book-feature">
+<small>E-BOOK</small>
+<div><div class="symbol">✦</div><b>O AGIR DO<br>ESPÍRITO SANTO</b></div>
+<em>Rev. Rodrigo Alexandre de Melo</em>
+</div>
+</div>
+</header>
 
 <section class="light">
 <div class="container">
-<h2 class="section-title">Mais do que uma leitura.<br>Uma jornada de edificação.</h2>
-<p class="section-sub">O material foi estruturado para conectar as Escrituras com a vida prática e pode ser usado em devocionais, Escola Bíblica, grupos pequenos e células.</p>
+<h2 class="title">Mais do que uma leitura.<br>Uma jornada de edificação.</h2>
+<p class="subtitle">O material foi estruturado para conectar as Escrituras com a vida prática e pode ser usado em devocionais, Escola Bíblica, Pequenos Grupos e Grupos de Comunhão.</p>
 <div class="cards">
 <div class="card"><div class="icon">🔥</div><h3>Poder do Espírito</h3><p>Compreenda o papel do Espírito Santo na capacitação, santificação e testemunho cristão.</p></div>
 <div class="card"><div class="icon">📖</div><h3>Fundamentação bíblica</h3><p>Estudos desenvolvidos a partir de textos do livro de Atos e suas correlações bíblicas.</p></div>
-<div class="card"><div class="icon">👥</div><h3>Para estudar em grupo</h3><p>Perguntas de reflexão para pequenos grupos e Escola Bíblica, além da aplicação prática.</p></div>
+<div class="card"><div class="icon">👥</div><h3>Para estudar em grupo</h3><p>Perguntas de reflexão para Pequenos Grupos, Grupos de Comunhão e Escola Bíblica, além da aplicação prática.</p></div>
 </div>
 </div>
 </section>
 
-<section class="dark">
+<section class="light" style="padding-top:0;">
 <div class="container">
-<h2 class="section-title">O que você encontrará<br>nestas páginas?</h2>
-<p class="section-sub">Seis estudos que percorrem temas centrais da igreja primitiva e sua aplicação à vida cristã atual.</p>
-<div class="chapters">
-<div class="card"><strong>CAPÍTULO 01</strong><h3>O Batismo com o Espírito Santo</h3><p>Atos 1:1–9 — promessa, espera, obediência e capacitação para testemunhar.</p></div>
-<div class="card"><strong>CAPÍTULO 02</strong><h3>A Mensagem da Igreja</h3><p>Atos 1:1–11 — Cristo, ressurreição, Reino de Deus e a promessa do Espírito.</p></div>
-<div class="card"><strong>CAPÍTULO 03</strong><h3>Começando Bem e Terminando Mal</h3><p>Um alerta a partir da trajetória de Judas sobre superficialidade, pecado e arrependimento.</p></div>
-<div class="card"><strong>CAPÍTULO 04</strong><h3>Os “De Repentes” de Deus</h3><p>Atos 2:1–2 — Oração, obediência e intervenções transformadoras de Deus.</p></div>
-<div class="card"><strong>CAPÍTULO 05</strong><h3>O Que Quer Isto Dizer?</h3><p>Atos 2:1–13 — Natureza, significado e propósito do agir do Espírito Santo.</p></div>
-<div class="card"><strong>CAPÍTULO 06</strong><h3>O Pedro Que Dá Pena ou o Pedro Que Vale a Pena?</h3><p>Atos 2:14–41 — A transformação de Pedro e sua nova ousadia para testemunhar.</p></div>
+<h2 class="title">O que você vai encontrar<br>nestas páginas?</h2>
+<p class="subtitle">Seis estudos que percorrem temas centrais da igreja primitiva e sua aplicação à vida cristã atual.</p>
+<div class="collection">
+
+<div class="book-card">
+<p class="chapter-label">CAPÍTULO 01</p>
+<p class="chapter-title">O Batismo com o Espírito Santo</p>
+<p class="chapter-desc"><b>Atos 1:1–9</b> — Promessa, espera, obediência e capacitação para testemunhar.</p>
+</div>
+
+<div class="book-card">
+<p class="chapter-label">CAPÍTULO 02</p>
+<p class="chapter-title">A Mensagem da Igreja</p>
+<p class="chapter-desc"><b>Atos 1:1–11</b> — Cristo, ressurreição, Reino de Deus e a promessa do Espírito.</p>
+</div>
+
+<div class="book-card">
+<p class="chapter-label">CAPÍTULO 03</p>
+<p class="chapter-title">Começando Bem e Terminando Mal</p>
+<p class="chapter-desc">Um alerta a partir da trajetória de Judas sobre superficialidade, pecado e arrependimento.</p>
+</div>
+
+<div class="book-card">
+<p class="chapter-label">CAPÍTULO 04</p>
+<p class="chapter-title">Os "De Repentes" de Deus</p>
+<p class="chapter-desc"><b>Atos 2:1–2</b> — Oração, obediência e intervenções transformadoras de Deus.</p>
+</div>
+
+<div class="book-card">
+<p class="chapter-label">CAPÍTULO 05</p>
+<p class="chapter-title">O Que Quer Isto Dizer?</p>
+<p class="chapter-desc"><b>Atos 2:1–13</b> — Natureza, significado e propósito do agir do Espírito Santo.</p>
+</div>
+
+<div class="book-card">
+<p class="chapter-label">CAPÍTULO 06</p>
+<p class="chapter-title">O Pedro Que Dá Pena ou o Pedro Que Vale a Pena?</p>
+<p class="chapter-desc"><b>Atos 2:14–41</b> — A transformação de Pedro e sua nova ousadia para testemunhar.</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<section>
+<section class="author">
 <div class="container author">
 <div class="author-box">✝</div>
 <div>
-<h2>Sobre o autor</h2>
-<h3 style="color:#0a4fa3;font-size:16px">Rev. Rodrigo Alexandre de Melo</h3>
-<p>Pastor desde 2000, ordenado reverendo em 2006, membro da Igreja do Nazareno desde 1994 e com mais de 25 anos de ministério.</p>
-<ul><li>Bacharelado em Teologia</li><li>Pós-graduação em Pregação Bíblica</li><li>Pós-graduação em Gestão Estratégica de Pessoas</li><li>MBA em Gestão Estratégica de Negócios</li></ul>
+<div class="author-eyebrow">Sobre o autor</div>
+<h2>Rev. Rodrigo Alexandre de Melo</h2>
+<h3>Pastor · Igreja do Nazareno</h3>
+<p>Pastor desde 2000 e ordenado reverendo em 2006, é membro da Igreja do Nazareno desde 1994, com mais de 25 anos de ministério dedicados ao ensino da Palavra.</p>
+<ul class="author-credentials">
+<li>Bacharelado em Teologia</li>
+<li>Pós-graduação em Pregação Bíblica</li>
+<li>Pós-graduação em Gestão Estratégica de Pessoas</li>
+<li>MBA em Gestão Estratégica de Negócios</li>
+</ul>
 </div>
 </div>
 </section>
 
-<section class="offer" id="oferta">
+<section class="offer">
 <div class="container">
-<h2 class="section-title">Comece hoje sua jornada</h2>
+<h2>Comece hoje sua jornada</h2>
 <p>Tenha acesso ao e-book <strong>O Agir do Espírito Santo</strong> e use este material para aprofundar sua fé e edificar outras pessoas.</p>
-<div class="price">R$ 19,70</div>
-<div style="font-size:14px;font-weight:600;color:#c7daf3;margin-top:-8px;margin-bottom:15px">(valor promocional no PIX)</div>
+<div class="bigprice">R$ 19,70</div>
+<small>(valor promocional no PIX)</small>
 <a class="cta" href="https://payfast.greenn.com.br/44pssd8" target="_blank" rel="noopener noreferrer">COMPRAR AGORA</a>
-<p style="margin-top:18px">Pagamento e entrega digital conforme a plataforma de venda.</p>
+<p style="margin-top:18px;font-size:12px;">Pagamento e entrega digital conforme a plataforma de venda.</p>
 </div>
 </section>
 
-<section>
-<div class="container faq">
-<h2 class="section-title">Perguntas frequentes</h2>
-<details><summary>O e-book é digital?</summary><p>Sim. O material apresentado é um e-book digital.</p></details>
-<details><summary>Posso usar o material em pequenos grupos?</summary><p>Sim. O próprio conteúdo inclui um guia com perguntas para Pequenos Grupos e Escola Bíblica.</p></details>
-<details><summary>O conteúdo é baseado em Atos?</summary><p>Sim. A obra é uma série de mensagens e estudos no livro de Atos, percorrendo seus capítulos iniciais.</p></details>
+<section class="faq">
+<div class="container">
+<h2 class="title">Perguntas Frequentes</h2>
+<div class="faq-item">
+<h4>O e-book é digital?</h4>
+<p>Sim. O material apresentado é um e-book digital.</p>
+</div>
+<div class="faq-item">
+<h4>Posso usar o material em Pequenos Grupos ou Grupos de Comunhão?</h4>
+<p>Sim. O próprio conteúdo inclui um guia com perguntas para Pequenos Grupos, Grupos de Comunhão e Escola Bíblica.</p>
+</div>
+<div class="faq-item">
+<h4>O conteúdo é baseado em Atos?</h4>
+<p>Sim. A obra é uma série de mensagens e estudos no livro de Atos, percorrendo seus capítulos iniciais.</p>
+</div>
 </div>
 </section>
-<footer>
-  <div>E-mail - SAC: leitoresprodutos@gmail.com</div>
-  <div style="margin-top:8px;">© 2026 — O Agir do Espírito Santo · Todos os direitos reservados.</div>
+
+<footer class="footer">
+<div class="container">
+<p style="font-weight:700;font-size:13px;color:#fff;margin-bottom:6px;">O Agir do Espírito Santo</p>
+<p style="font-weight:700;font-size:13px;color:#fff;margin-bottom:16px;">E-mail - SAC: leitoresprodutos@gmail.com</p>
+<p style="font-size:11px;color:#8FA9CC;margin-bottom:4px;">Conteúdo produzido e gerado por: Carlos Newman - Gerente de Projetos / Delivery Manager / Produtor Digital</p>
+<p style="margin-top:16px;">© 2026 — O Agir do Espírito Santo · Todos os direitos reservados.</p>
+</div>
 </footer>
+
 </body>
 </html>
-landing-page-o-agir-do-espirito-santo-atualizada.html
-HTML
-Anúncio
-Anúncios não influenciam as respostas obtidas do ChatGPT. Seus chats continuam privados. 
-Saiba mais sobre anúncios e personalização
-quero que inclua ao lado do grupos pequenos: grupos de comunhão 
-
-It seems like I can’t do more advanced data analysis right now. Please try again later. 
-
-Chat pausado até o limite ser renovado à(s) 16:08
-Você atingiu o limite de chats com arquivos ou imagens. Comece um novo chat só de texto ou faça upgrade para continuar agora.
-Novo chat
-Aproveite a promoção gratuita
